@@ -1,4 +1,4 @@
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 const Cat = require("../models/Cat")
 
 
@@ -9,3 +9,8 @@ exports.getHomeView =  async (req, res) => {
     const cats = await Cat.find().lean()
     res.render("index", {cats} );
 }
+
+// exports.AboutView = async (req, res) => {
+
+//     res.render()
+// }
