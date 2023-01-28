@@ -2,15 +2,10 @@
 const Cat = require("../models/Cat")
 
 
-    const catsCollection =Cat.find(function(err, cats) {
-        if(!err) {
-            return cats
-        }
-    })
+   
+//ASYNC functions
+exports.getHomeView =  async (req, res) => {
 
-
-
-exports.getHomeView =  (req, res) => {
-  
-    res.render("index", {catsCollection} );
+    const cats = await Cat.find().lean()
+    res.render("index", {cats} );
 }
