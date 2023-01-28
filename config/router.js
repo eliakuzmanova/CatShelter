@@ -9,6 +9,6 @@ const addBreedController = require("../controllers/addBreedController")
 module.exports = (app) => {
 
     router.get('/', homeController.getHomeView)
-   // router.get("/cats/add-breed", addBreedController.getAddBreedView)
+    router.get("/cats/add-breed", addBreedController.getAddBreedView)
     return router
 }
